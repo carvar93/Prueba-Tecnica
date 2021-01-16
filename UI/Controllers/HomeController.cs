@@ -26,6 +26,27 @@ namespace UI.Controllers
         }
 
 
+
+
+        [HttpPost]
+        public ActionResult createServicio(string nombre, string monto)
+        {
+
+            string p, d, m;
+            p = nombre;
+            d = monto;
+            return Redirect("About/");
+            //return View();
+            //return Content("hola");
+        }
+
+
+
+
+
+
+
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
