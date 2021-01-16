@@ -1,0 +1,11 @@
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\bin\Debug\LogicaNegocios.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\bin\Debug\LogicaNegocios.pdb
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\bin\Debug\AccesoDatos.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\bin\Debug\Entidades.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\bin\Debug\AccesoDatos.pdb
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\bin\Debug\Entidades.pdb
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\obj\Debug\LogicaNegocios.csprojAssemblyReference.cache
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\obj\Debug\LogicaNegocios.csproj.CoreCompileInputs.cache
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\obj\Debug\LogicaNegocios.csproj.CopyComplete
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\obj\Debug\LogicaNegocios.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\LogicaNegocios\obj\Debug\LogicaNegocios.pdb

@@ -1,0 +1,6 @@
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\Entidades.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\Entidades.pdb
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.pdb
