@@ -9,7 +9,8 @@ namespace UI.Controllers
 {
     public class HomeController : Controller
     {
-        private int idSeleccionado;
+        private int servicioSeleccionado;
+        private string placaR;
 
         public ActionResult Index()
         {
@@ -37,26 +38,36 @@ namespace UI.Controllers
         public ActionResult create(string placa, string dueño, string marca, FormCollection form)
         {
 
-            string p, d, m;
-            p = placa;
-            d = dueño;
-            m = marca;
+            
+            int idVehiculo;
+            Carro carro = new Carro();
+            carro.placa = placa;
+            carro.dueño = dueño;
+            carro.marca = marca;
 
+            LN.AgregarVehiculo(carro);
+
+            placaR = carro.placa;
 
             var optionsValue = form["datos"];
-            idSeleccionado = Int32.Parse(optionsValue);
+            servicioSeleccionado = Int32.Parse(optionsValue);
 
-            //TODO:
-           // return RedirectToAction("Drop");
-            //return View();
-            //return Content("hola");
-
+            idVehiculo = obtenerIdVehiculoRegistrado();
+            LN.asociarVehiculoServicio(servicioSeleccionado, idVehiculo);
+            
             return RedirectToAction("Index/");
 
         }
 
-
-
+        public int obtenerIdVehiculoRegistrado()
+        {
+            int plaquita = 0;
+            
+            Carro carro = new Carro();
+            carro = LN.ConsultarVehiculo(placaR);
+            plaquita = carro.id;
+            return plaquita;
+        }
 
         [HttpPost]
         public ActionResult createServicio(string nombre, string monto)
