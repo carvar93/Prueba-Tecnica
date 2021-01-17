@@ -4,3 +4,9 @@ C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.
 C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.dll
 C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.pdb
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\Entidades.dll.config
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\EntityFramework.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\EntityFramework.xml
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\Entidades\obj\Debug\Entidades.csproj.CopyComplete

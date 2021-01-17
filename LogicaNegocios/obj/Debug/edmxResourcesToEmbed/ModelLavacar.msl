@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="LavacarContext">
+    <EntitySetMapping Name="Servicios">
+      <EntityTypeMapping TypeName="masterModel.Servicios">
+        <MappingFragment StoreEntitySet="Servicios">
+          <ScalarProperty Name="ID_Servicio" ColumnName="ID_Servicio" />
+          <ScalarProperty Name="Descripción" ColumnName="Descripción" />
+          <ScalarProperty Name="Monto" ColumnName="Monto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculo">
+      <EntityTypeMapping TypeName="masterModel.Vehiculo">
+        <MappingFragment StoreEntitySet="Vehiculo">
+          <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
+          <ScalarProperty Name="Placa" ColumnName="Placa" />
+          <ScalarProperty Name="Dueño" ColumnName="Dueño" />
+          <ScalarProperty Name="Marca" ColumnName="Marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculo_Servicio">
+      <EntityTypeMapping TypeName="masterModel.Vehiculo_Servicio">
+        <MappingFragment StoreEntitySet="Vehiculo-Servicio">
+          <ScalarProperty Name="ID_Vehiculo_Servicio" ColumnName="ID_Vehiculo-Servicio" />
+          <ScalarProperty Name="ID_Servicio" ColumnName="ID_Servicio" />
+          <ScalarProperty Name="ID_Vehiculo" ColumnName="ID_Vehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

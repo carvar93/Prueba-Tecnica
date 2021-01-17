@@ -1,6 +1,8 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
 }
+
 <!--
 <div class="jumbotron">
     <h1>ASP.NET</h1>
@@ -35,7 +37,7 @@
 <div class="jumbotron">
     <div class="row">
         <div class="col-12">
-            <form action="/Home" method="post" id="frmVehiculo">
+            <form action="/Home/create" method="post" id="frmVehiculo">
 
                 <div class="form-group row">
                     <label for="placa" class="col-sm-1 col-form-label">Placa</label>
@@ -58,13 +60,17 @@
                 <div class="form-group row">
 
                     <label class="col-sm-1 col-form-label" for="cars">Servicio</label>
-
-                    <select class="form-control form-control-lg" name="servicios" id="servicios">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select>
+                    <!--
+    <select class="form-control form-control-lg" name="servicios" id="servicios">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+        -->
+                    @Html.DropDownList("datos",items,"Seleccionar",new { @class="form-control"})
+                    
+                    
                     <input type="submit" class="btn btn-primary"
                            value="add" />
                 </div>

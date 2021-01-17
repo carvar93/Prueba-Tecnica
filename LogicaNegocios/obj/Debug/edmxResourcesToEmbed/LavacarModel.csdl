@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LavacarDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Servicios">
+    <Key>
+      <PropertyRef Name="ID_Servicio" />
+    </Key>
+    <Property Name="ID_Servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripción" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Monto" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Vehiculo_Servicio" Relationship="Self.FK_Servicio" FromRole="Servicios" ToRole="Vehiculo_Servicio" />
+  </EntityType>
+  <EntityType Name="Vehiculo">
+    <Key>
+      <PropertyRef Name="ID_Vehiculo" />
+    </Key>
+    <Property Name="ID_Vehiculo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Placa" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Dueño" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Marca" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Vehiculo_Servicio" Relationship="Self.FK_Vehiculo" FromRole="Vehiculo" ToRole="Vehiculo_Servicio" />
+  </EntityType>
+  <EntityType Name="Vehiculo_Servicio">
+    <Key>
+      <PropertyRef Name="ID_Vehiculo_Servicio" />
+    </Key>
+    <Property Name="ID_Vehiculo_Servicio" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ID_Servicio" Type="Int32" Nullable="false" />
+    <Property Name="ID_Vehiculo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Servicios" Relationship="Self.FK_Servicio" FromRole="Vehiculo_Servicio" ToRole="Servicios" />
+    <NavigationProperty Name="Vehiculo" Relationship="Self.FK_Vehiculo" FromRole="Vehiculo_Servicio" ToRole="Vehiculo" />
+  </EntityType>
+  <Association Name="FK_Servicio">
+    <End Role="Servicios" Type="Self.Servicios" Multiplicity="1" />
+    <End Role="Vehiculo_Servicio" Type="Self.Vehiculo_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Servicios">
+        <PropertyRef Name="ID_Servicio" />
+      </Principal>
+      <Dependent Role="Vehiculo_Servicio">
+        <PropertyRef Name="ID_Servicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vehiculo">
+    <End Role="Vehiculo" Type="Self.Vehiculo" Multiplicity="1" />
+    <End Role="Vehiculo_Servicio" Type="Self.Vehiculo_Servicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculo">
+        <PropertyRef Name="ID_Vehiculo" />
+      </Principal>
+      <Dependent Role="Vehiculo_Servicio">
+        <PropertyRef Name="ID_Vehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LavacContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Servicios" EntityType="Self.Servicios" />
+    <EntitySet Name="Vehiculo" EntityType="Self.Vehiculo" />
+    <EntitySet Name="Vehiculo_Servicio" EntityType="Self.Vehiculo_Servicio" />
+    <AssociationSet Name="FK_Servicio" Association="Self.FK_Servicio">
+      <End Role="Servicios" EntitySet="Servicios" />
+      <End Role="Vehiculo_Servicio" EntitySet="Vehiculo_Servicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vehiculo" Association="Self.FK_Vehiculo">
+      <End Role="Vehiculo" EntitySet="Vehiculo" />
+      <End Role="Vehiculo_Servicio" EntitySet="Vehiculo_Servicio" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

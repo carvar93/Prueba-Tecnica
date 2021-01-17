@@ -85,3 +85,9 @@ C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\obj\Debug\UI.csproj.CoreCom
 C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\obj\Debug\UI.dll
 C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\obj\Debug\UI.pdb
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\bin\EntityFramework.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\bin\LogicaNegocios.dll.config
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\bin\EntityFramework.xml
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\bin\EntityFramework.SqlServer.dll
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\bin\Entidades.dll.config
+C:\Users\cavu9\OneDrive\Escritorio\Prueba Tecnica\UI\bin\EntityFramework.SqlServer.xml
