@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LogicaNegocios;
+using Entidades;
 namespace UI.Controllers
 {
     public class ServicesController : Controller
@@ -11,24 +13,23 @@ namespace UI.Controllers
         // GET: Services
         public ActionResult Index()
         {
+            //sirve para servicios
+            //LavacContext s = new LavacContext();
+            //List<Servicios> li = new List<Servicios>();
+            //li = LN.ConsultarServicios();
+
+            //return View(li.ToList());
+
 
             LavacContext s = new LavacContext();
-            List<Servicios> li = new List<Servicios>();
-            li = LN.ConsultarServicios();
+            List<VehiculoxServicio> list = new List<VehiculoxServicio>();
+            list= LN.ConsultarServiciosxVehiculos();
 
-            //IEnumerable<Servicios> _Book_IE = li as IEnumerable<Servicios>;
-
-
-           
+            return View(list.ToList());
 
 
 
 
-
-
-
-
-            return View(li.ToList());
         }
     }
 }
