@@ -32,34 +32,19 @@ namespace LogicaNegocios
             {
                 throw e;
             }
-
-
+            
         }
-
-
-
+        
 
 
         public static List<VehiculoxServicio> ConsultarServiciosxVehiculos()
         {
-
-            LavacContext s = new LavacContext();
+             LavacContext s = new LavacContext();
             List<VehiculoxServicio> listavehiculoxServicio = new List<VehiculoxServicio>();
             List<object> milista = new List<object>();
-           
-
-            //DataTable dt = new DataTable();
-            //dt.Columns.Add("ID");
-            //dt.Columns.Add("dESCRIPCION");
-            //dt.Columns.Add("Monto");
-            //dt.Columns.Add("Placa");
-            //DataRow dr = null;
-
-            //t1 servicios  a
+           //t1 servicios  a
             //t2 vxs        h
             //t3  vehi      c
-
-
             var result = from t1 in s.Servicios
                   join t2 in s.Vehiculo_Servicio on t1.ID_Servicio equals t2.ID_Servicio
                   join t3 in s.Vehiculo on t2.ID_Vehiculo equals t3.ID_Vehiculo  
@@ -70,9 +55,7 @@ namespace LogicaNegocios
                       t1.Monto,
                       t3.Placa
                   };
-
-
-
+            
             foreach (var dto in result)
             {
                 VehiculoxServicio vxs = new VehiculoxServicio();
@@ -83,23 +66,9 @@ namespace LogicaNegocios
 
                 listavehiculoxServicio.Add(vxs);
             }
-
-            //foreach (var dto in result)
-            //{
-            //    dr=dt.NewRow();
-            //    dr["ID"] = dto.ID_Servicio;
-            //    dr["dESCRIPCION"] = dto.Descripción;
-            //    dr["Monto"] = dto.Monto;
-            //    dr["Placa"] = dto.Placa;
-
-            //}
-            //List<DataRow> list = dt.AsEnumerable().ToList();
-            //return list;
-
-
+            
             return listavehiculoxServicio;
-            //return dt;
-
+           
         }
 
 

@@ -48,13 +48,10 @@ namespace UI.Controllers
             LN.AgregarVehiculo(carro);
 
             placaR = carro.placa;
-
             var optionsValue = form["datos"];
             servicioSeleccionado = Int32.Parse(optionsValue);
-
             idVehiculo = obtenerIdVehiculoRegistrado();
             LN.asociarVehiculoServicio(servicioSeleccionado, idVehiculo);
-            
             return RedirectToAction("Index/");
 
         }
@@ -62,7 +59,6 @@ namespace UI.Controllers
         public int obtenerIdVehiculoRegistrado()
         {
             int plaquita = 0;
-            
             Carro carro = new Carro();
             carro = LN.ConsultarVehiculo(placaR);
             plaquita = carro.id;
@@ -81,8 +77,7 @@ namespace UI.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
-            return View();
+             return View();
         }
 
         public ActionResult Contact()

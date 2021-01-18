@@ -13,23 +13,12 @@ namespace UI.Controllers
         // GET: Services
         public ActionResult Index()
         {
-            //sirve para servicios
-            //LavacContext s = new LavacContext();
-            //List<Servicios> li = new List<Servicios>();
-            //li = LN.ConsultarServicios();
-
-            //return View(li.ToList());
-
-
+           
             LavacContext s = new LavacContext();
             List<VehiculoxServicio> list = new List<VehiculoxServicio>();
             list= LN.ConsultarServiciosxVehiculos();
-
             return View(list.ToList());
-
-
-
-
+            
         }
     }
 }
